@@ -6,14 +6,26 @@ ctx = canvas.getContext("2d");
 
 color = "black";
 width_of_line = 1;
-radius = 5;
+radius = 20;
 
 canvas.addEventListener("mousedown", my_mousedown);
 
 function my_mousedown(e){
     color = document.getElementById("color_box").value;
+    if (color == "") {
+        color = "purple";
+        document.getElementById("color_box").value = color;
+    }
     width_of_line = document.getElementById("width_of_the_line").value;
+    if (width_of_line == "") {
+        width_of_line = 1;
+        document.getElementById("width_of_the_line").value = width_of_line;
+    }
     radius = document.getElementById("radius").value;
+    if (radius == "") {
+        radius = 20;
+        document.getElementById("radius").value = radius;
+    }
     mouseEvent = "mouseDown";
     console.log(color);
 }
