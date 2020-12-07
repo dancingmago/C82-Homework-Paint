@@ -29,18 +29,9 @@ function my_mousemove(e){
         ctx.beginPath();
         ctx.strokeStyle = color;
         ctx.lineWidth = width_of_line;
-        /* console.log("last_position_of_x_and_y = ");
-        console.log("x = " + last_position_of_x + "y = " + last_position_of_y); */
-
-         ctx.moveTo(current_position_of_x, current_position_of_y); 
-
-        /* console.log("current_position_of_x_and_y = ");
-        console.log("x = " + current_position_of_x + "y = " + current_position_of_y); */
         ctx.arc(current_position_of_x, current_position_of_y, radius, 0, 2 * Math.PI);
         ctx.stroke();
     }
-    last_position_of_x = current_position_of_x;
-    last_position_of_y = current_position_of_y;
 }
 
 canvas.addEventListener("mouseup", my_mouseup);
